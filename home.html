@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <title>Archivos - OneDrive</title>
+  <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/7.2.0/css/fabric.min.css">
+  <link href="https://static2.sharepointonline.com/files/fabric/onedrive-assets/onedrive-font-face-definitions.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="assets/styles/home.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <script src="assets/scripts/script.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="icon-apps">
+        <span class="ms-Icon--menu ms-icon-font-size-20"></span>
+    </div>
+    <div class="title">OneDrive</div>
+    <div class="header-rigth">
+        <div class="header-link">
+            <span class="ms-Icon--skypeMessage ms-icon-font-size-20"> </span>
+        </div>
+        <div class="header-link">
+            <span class="ms-Icon--bell ms-icon-font-size-20"> </span>
+        </div>
+        <div class="header-link">
+            <span class="ms-Icon--gear ms-icon-font-size-20"> </span>
+        </div>
+        <div class="header-link">
+            <span class="ms-Icon--question ms-icon-font-size-20"> </span>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-search">
+        <i id="search-icon"></i>
+        <input type="text" class="search" placeholder="Buscar todo" onfocus="displaySearchIcon(true)" onblur="displaySearchIcon(false)">
+      </div>
+      <div class="sidebar-menu">
+        <div class="nav-link"><span class="text-OneDrive">OneDrive</span></div>
+        <div class="nav-link selected" onclick="changeSection(this)">Archivos</div>
+        <div class="nav-link" onclick="changeSection(this)">Recientes</div>
+        <div class="nav-link" onclick="changeSection(this)">Fotos</div>
+        <div class="nav-link" onclick="changeSection(this)">Compartido</div>
+        <div class="nav-link" onclick="changeSection(this)">Papelera de reciclaje</div>
+        <div class="nav-link" onclick="changeSection(this)">Equipos</div>
+      </div>
+      <div class="sidebar-footer">
+
+      </div>
+    </div>
+    <main>
+      <div class="main-header">
+        <div class="header-left">
+          <div class="main-link" onclick="toggleSubMenu(this)">
+            <i class="ms-Button-icon icon-83"></i>
+            <span>Nuevo</span>
+            <i class="ms-Button-menuIcon menuIcon-91"></i>
+            <div class="submenu" style="display: none">
+              <div class="submenu-link">
+                <img src="https://spoprod-a.akamaihd.net/files/odsp-next-prod_2019-03-22_20190329.001/odsp-media/images/itemtypes/16/folder.svg" width="16px">
+                Carpeta
+              </div>
+              <li class="ms-ContextualMenu-divider divider-99"></li>
+              <div class="submenu-link">
+                <img src="https://spoprod-a.akamaihd.net/files/odsp-next-prod_2019-03-22_20190329.001/odsp-media/images/itemtypes/16/docx.png">
+                Documento de Word
+              </div>
+              <div class="submenu-link">
+                <img src="https://spoprod-a.akamaihd.net/files/odsp-next-prod_2019-03-22_20190329.001/odsp-media/images/itemtypes/16/xlsx.png">
+                Libro de Excel
+              </div>
+              <div class="submenu-link">
+                <img src="https://spoprod-a.akamaihd.net/files/odsp-next-prod_2019-03-22_20190329.001/odsp-media/images/itemtypes/16/pptx.png">
+                Presentación de PowerPoint
+              </div>
+              <div class="submenu-link">
+                <img src="https://spoprod-a.akamaihd.net/files/odsp-next-prod_2019-03-22_20190329.001/odsp-media/images/itemtypes/16/onetoc.png">
+                Bloc de notas de OneNote
+              </div>
+              <div class="submenu-link">
+                <img src="https://spoprod-a.akamaihd.net/files/odsp-next-prod_2019-03-22_20190329.001/odsp-media/images/itemtypes/16/xlsx.png">
+                Encuenta de Excel
+              </div>
+              <div class="submenu-link">
+                <img src="https://spoprod-a.akamaihd.net/files/odsp-next-prod_2019-03-22_20190329.001/odsp-media/images/itemtypes/16/txt.png">
+                Documento de texto sin formato
+              </div>
+            </div>
+          </div>
+          <div class="main-link" onclick="toggleSubMenu(this)">
+            <i class="ms-Button-icon icon-83"></i>
+            <span>Cargar</span>
+            <i class="ms-Button-menuIcon menuIcon-91"></i>
+            <div class="submenu" style="display: none">
+              <div class="submenu-link">
+                Archivos
+              </div>
+              <div class="submenu-link">
+                Carpeta
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-rigth">
+          <div class="main-link" onclick="toggleSubMenu(this)">
+              <i class="ms-Button-icon icon-83"></i>
+              Ordenar
+              <i class="ms-Button-menuIcon menuIcon-91"></i>
+              <div class="submenu" style="display: none; margin-left: -22px;">
+                <div class="submenu-link">
+                  Reorganizar
+                </div>
+                <li class="ms-ContextualMenu-divider divider-99"></li>
+                <div class="submenu-link">
+                  Guardar el criterio de ordenación
+                </div>
+              </div>
+          </div>
+          <div class="main-link" onclick="toggleSubMenu(this)">
+              <i class="ms-Button-icon icon-83"></i>
+              <div class="submenu" style="display: none; margin-left: -104px;">
+                <div class="submenu-link">
+                  <i class="ms-ContextualMenu-icon icon-135"></i>
+                  Lista
+                </div>
+                <div class="submenu-link">
+                  <i class="ms-ContextualMenu-icon icon-135"></i>
+                  Lista compacta
+                </div>
+                <div class="submenu-link">
+                  <i class="ms-ContextualMenu-icon icon-135"></i>
+                  Mosaicos
+                </div>
+                <div class="submenu-link">
+                  <i class="ms-ContextualMenu-icon icon-135"></i>
+                  Fotos
+                </div>
+              </div>
+          </div>
+          <div class="main-link">
+            <i class="ms-Button-icon icon-83"></i>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <h2 class="title" id="title">Archivos</h2>
+        <div id="folders">
+          <div class="folder" onmouseover="hoverFolder(this, true)" onmouseout="hoverFolder(this, false)">
+            <img src="assets/images/folder-large_back.svg">
+            <img src="assets/images/folder-large_front.svg">
+            <label class="containerChecked" style="display:none">
+              <input type="checkbox" class="checkmark-input">
+              <span class="checkmark" onclick="addClassSelected(this, true)"></span>
+            </label>
+          </div>
+          <div class="folder" onmouseover="hoverFolder(this, true)" onmouseout="hoverFolder(this, false)">
+            <img src="assets/images/folder-large_back.svg">
+            <img src="assets/images/folder-large_front.svg">
+            <label class="containerChecked" style="display:none">
+              <input type="checkbox" class="checkmark-input">
+              <span class="checkmark" onclick="addClassSelected(this, true)"></span>
+            </label>
+          </div>
+          <div class="folder" onmouseover="hoverFolder(this, true)" onmouseout="hoverFolder(this, false)">
+            <img src="assets/images/folder-large_back.svg">
+            <img src="assets/images/folder-large_front.svg">
+            <label class="containerChecked" style="display:none">
+              <input type="checkbox" class="checkmark-input">
+              <span class="checkmark" onclick="addClassSelected(this, true)"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

